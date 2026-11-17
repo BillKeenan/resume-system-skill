@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name — Resume</title>
+<!--
+  RESUME DESIGN TEMPLATE (resume-system skill)
+
+  HOW THIS IS USED
+  - The assistant copies this file into the user's resumes/ folder, replaces the
+    sample content with the finished markdown resume, and prints it to PDF.
+  - Keep every class name. To change the look, edit only the :root tokens
+    and the CSS. Do not add inline styles.
+  - Repeat the role block (the "role" article) once per role. Delete any
+    section you do not use (competencies, patents, education).
+  - Target: two US Letter pages. If it runs over, shorten the markdown (see the
+    page-fit cut order); never shrink the type below 9.5pt to make it fit.
+
+  PRINT TO PDF
+  - Chrome/Edge: Print, Destination "Save as PDF", Paper size Letter (or A4),
+    Margins "Default", turn OFF "Headers and footers", turn ON "Background graphics".
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1f2733;
+    --muted: #566170;
+    --rule: #cdd3da;
+    --accent: #1d5c63;
+    --paper: #ffffff;
+    --desk: #e8ebee;
+
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+
+    --rail: 1.3in;
+    --gap: 0.25in;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  body {
+    margin: 0;
+    background: var(--desk);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 10pt;
+    line-height: 1.42;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* On screen the page is a sheet of paper on a desk. */
+  .sheet {
+    width: 8.5in;
+    max-width: 100%;
+    margin: 24px auto;
+    padding: 0.6in 0.8in 0.6in 0.65in;
+    background: var(--paper);
+    box-shadow: 0 1px 3px rgba(31, 39, 51, 0.18);
+  }
+
+  @page { size: letter; margin: 0.6in 0.8in 0.6in 0.65in; }
+
+  @media print {
+    body { background: none; }
+    .sheet { width: auto; margin: 0; padding: 0; box-shadow: none; }
+  }
+
+  /* Phone: drop the rail into the flow so nothing scrolls sideways. */
+  @media screen and (max-width: 640px) {
+    .sheet { margin: 0; padding: 24px 16px; }
+    .role, .entry { grid-template-columns: 1fr; row-gap: 2px; }
+  }
+
+  /* ---------- Masthead ---------- */
+  .masthead h1 {
+    margin: 0;
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 30pt;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+  }
+  .masthead .tagline {
+    margin: 4px 0 0;
+    font-family: var(--serif);
+    font-size: 12.5pt;
+    color: var(--accent);
+  }
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 18px;
+    margin: 8px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 9.5pt;
+    color: var(--muted);
+  }
+  .contact a { color: inherit; text-decoration: none; }
+
+  /* ---------- Sections ---------- */
+  section { margin-top: 0.2in; }
+
+  section > h2 {
+    margin: 0 0 8px;
+    padding-top: 7px;
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 10.5pt;
+    color: var(--ink);
+    border-top: 2px solid var(--accent);
+    width: 0.45in;
+    white-space: nowrap;
+  }
+  /* The accent bar is short; the heading text overflows past it on purpose. */
+  section > h2 { overflow: visible; }
+
+  .summary {
+    margin-top: 0.18in;
+    max-width: 6.2in;
+    font-family: var(--serif);
+    font-size: 11.5pt;
+    line-height: 1.45;
+  }
+  .summary p { margin: 0; }
+
+  /* ---------- Rail rows ---------- */
+  .role, .entry {
+    display: grid;
+    grid-template-columns: var(--rail) 1fr;
+    column-gap: var(--gap);
+    margin-top: 0.15in;
+    break-inside: avoid;
+  }
+  section > h2 + .role,
+  section > h2 + .entry { margin-top: 0; }
+
+  .when {
+    padding-top: 2px;
+    white-space: nowrap;
+    font-size: 8.5pt;
+    line-height: 1.35;
+    color: var(--muted);
+  }
+  .when .where { display: block; }
+
+  .what h3 {
+    margin: 0;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 12pt;
+    line-height: 1.25;
+  }
+  .what h3 .company {
+    display: block;
+    color: var(--accent);
+    font-weight: 500;
+    font-size: 11pt;
+  }
+
+  .context {
+    margin: 1px 0 4px;
+    font-style: italic;
+    font-size: 9.5pt;
+    color: var(--muted);
+  }
+
+  .what ul {
+    margin: 0;
+    padding-left: 14px;
+  }
+  .what li {
+    margin: 0 0 3px;
+    padding-left: 2px;
+  }
+  .what li::marker { color: var(--accent); }
+
+  .entry .what p { margin: 0; }
+
+  /* ---------- Competencies ---------- */
+  .competencies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px 22px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* ---------- Earlier experience: one line each ---------- */
+  .entry.compact { margin-top: 0.07in; }
+  .entry.compact .what p { font-size: 9.5pt; }
+  .entry.compact .what strong { font-weight: 600; }
+</style>
+</head>
+<body>
+<main class="sheet">
+
+  <header class="masthead">
+    <h1>Your Name</h1>
+    <p class="tagline">Senior Vice President, Engineering</p>
+    <ul class="contact">
+      <li>you@example.com</li>
+      <li>+1 555 010 0100</li>
+      <li><a href="https://www.linkedin.com/in/your-profile">linkedin.com/in/your-profile</a></li>
+      <li>City, Province or State</li>
+    </ul>
+  </header>
+
+  <!-- Summary: 3–4 lines. Line 1 mirrors the posting's title language, line 2 is ONE differentiator. -->
+  <div class="summary">
+    <p>Engineering executive who builds and scales global product organizations. Led 150 people across five countries through an operating-model redesign, pairing founder-level commercial judgment with enterprise-scale delivery. [Value proposition in the target company's own words.]</p>
+  </div>
+
+  <!-- Optional: delete this section for small companies that do not use ATS screening. -->
+  <section>
+    <h2>Competencies</h2>
+    <ul class="competencies">
+      <li>Organizational design</li>
+      <li>Executive partnership</li>
+      <li>Talent development</li>
+      <li>Platform strategy</li>
+      <li>Global delivery</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <!-- Repeat one article per role, newest first. -->
+    <article class="role">
+      <div class="when">
+        Jan 2021 – Present
+        <span class="where">City</span>
+      </div>
+      <div class="what">
+        <h3>Senior Vice President, Engineering <span class="company">Company Name</span></h3>
+        <p class="context">One line on what the company does and why the role mattered.</p>
+        <ul>
+          <li>Led a 150-person engineering organization across five countries, delivering [outcome] and reducing [cost or risk] by [amount].</li>
+          <li>Redesigned the operating model around autonomous teams, cutting time to market by [amount].</li>
+          <li>Launched [product or market], generating [revenue or users] within [period].</li>
+          <li>Partnered with the executive team to [decision], resulting in [outcome].</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="role">
+      <div class="when">
+        Jun 2017 – Dec 2020
+        <span class="where">City</span>
+      </div>
+      <div class="what">
+        <h3>Vice President, Engineering <span class="company">Company Name</span></h3>
+        <p class="context">One line of context.</p>
+        <ul>
+          <li>Built the leadership bench from [x] to [y] managers, introducing a career ladder that held attrition below [amount].</li>
+          <li>Raised delivery predictability from [x]% to [y]%, enabling reliable quarterly planning.</li>
+          <li>Closed [n] open roles by rebuilding the hiring process, cutting time to hire from [x] to [y].</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <!-- One line per role for early or founding experience. -->
+  <section>
+    <h2>Earlier experience</h2>
+    <div class="entry compact">
+      <div class="when">2011 – 2017</div>
+      <div class="what"><p><strong>Founder and CTO</strong>, Company Name. One line on scope and outcome.</p></div>
+    </div>
+    <div class="entry compact">
+      <div class="when">2005 – 2011</div>
+      <div class="what"><p><strong>Director, Engineering</strong>, Company Name. One line on scope and outcome.</p></div>
+    </div>
+  </section>
+
+  <!-- Optional: include when technical credibility or IP matters. -->
+  <section>
+    <h2>Patents</h2>
+    <div class="entry">
+      <div class="when">Year</div>
+      <div class="what"><p>US0000000 — Brief description of the invention.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="when">Year</div>
+      <div class="what"><p>Degree, Institution</p></div>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

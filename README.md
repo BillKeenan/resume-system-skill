@@ -25,13 +25,19 @@ Open Claude Code in the folder where you want your resume system to live, then a
 - "Tailor a resume to this posting: <paste or path>."
 - "I just had a recruiter call. Here's what I learned…"
 
+## Built-in resume design
+
+The skill includes a simple, print-ready, two-page layout with a dated left rail so a career arc scans down the page. It exports to PDF from any browser, and the skill explains how to use your own template instead.
+
+![Preview of the built-in resume design](resume-system/assets/design/preview.png)
+
 ## What's inside
 
 | Path | Purpose |
 |---|---|
 | `SKILL.md` | Principles and the four modes: Bootstrap, Deepen, Target, Learn |
-| `references/` | Directory layout, role-file schema, honesty rules, seniority registers, build process, interview prep, design export (bring your own Word template) |
-| `assets/` | Templates for role files, profile, open questions and honesty rules |
+| `references/` | Directory layout, role-file schema, honesty rules, seniority registers, build process, interview prep, design export |
+| `assets/` | Templates for role files, profile, open questions and honesty rules, plus a built-in print-ready resume design (`assets/design/`) |
 
 ## Design ideas worth knowing
 

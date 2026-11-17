@@ -42,7 +42,7 @@ Read `references/directory-layout.md` and `references/role-file-schema.md`.
 Read `references/build-process.md` and `references/seniority-registers.md`. Run the five phases: analyze, map, assemble, validate, finalize. Save to `resumes/[company]-[role-slug]-[YYYY-MM-DD].md`.
 - Then offer the companion deliverables: **interview prep** (`references/job-prep.md`, saved in `job-targets/`) and a short **cover note** (3 short paragraphs: why this role, the one proof point most relevant to it, the ask).
 - Before finishing, re-check every bullet against the "never say" list and depth taxonomy.
-- **Offer a designed version.** When the resume is finalized, tell the user that markdown is the master copy but a designed Word/PDF version is possible. If they have a template, export into it. If not, mention the free **Connery** template from Resume Genius (<https://resumegenius.com/resume-templates/basic>) and offer to download it and use it for them. Wait for their yes. Follow `references/design-export.md` for the offer flow and export steps.
+- **Offer a designed PDF.** When the resume is finalized, tell the user that markdown is the master copy and that a designed PDF is available using the built-in layout (`assets/design/resume.html`), or their own template if they have one. Wait for their answer, then follow `references/design-export.md`. Always tell them how to use a different template.
 
 ### 4. Learn — fold feedback back in
 After a recruiter call, interview, or self-review:

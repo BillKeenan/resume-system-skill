@@ -33,4 +33,4 @@
 - No first-person pronouns
 - Company-line under each title: one phrase on what the company is and its scale
 - [Add personal preferences: fonts, color]
-- Design export: the user's chosen Word template is stored at `templates/design/[file]`; see the skill's `references/design-export.md` for how to export into it.
+- Design export: default is the skill's built-in layout (`assets/design/resume.html`). If the user prefers their own template, record it here as `templates/design/[file]`. See `references/design-export.md`.

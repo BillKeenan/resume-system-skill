@@ -42,7 +42,7 @@ Read `references/directory-layout.md` and `references/role-file-schema.md`.
 Read `references/build-process.md` and `references/seniority-registers.md`. Run the five phases: analyze, map, assemble, validate, finalize. Save to `resumes/[company]-[role-slug]-[YYYY-MM-DD].md`.
 - Then offer the companion deliverables: **interview prep** (`references/job-prep.md`, saved in `job-targets/`) and a short **cover note** (3 short paragraphs: why this role, the one proof point most relevant to it, the ask).
 - Before finishing, re-check every bullet against the "never say" list and depth taxonomy.
-- Offer docx/pdf export only if the user has a template; otherwise markdown is the deliverable.
+- Offer docx/pdf export only if the user has a design template; follow `references/design-export.md`. Otherwise markdown is the deliverable.
 
 ### 4. Learn — fold feedback back in
 After a recruiter call, interview, or self-review:

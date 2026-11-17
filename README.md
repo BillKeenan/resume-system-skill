@@ -30,7 +30,7 @@ Open Claude Code in the folder where you want your resume system to live, then a
 | Path | Purpose |
 |---|---|
 | `SKILL.md` | Principles and the four modes: Bootstrap, Deepen, Target, Learn |
-| `references/` | Directory layout, role-file schema, honesty rules, seniority registers, build process, interview prep |
+| `references/` | Directory layout, role-file schema, honesty rules, seniority registers, build process, interview prep, design export (bring your own Word template) |
 | `assets/` | Templates for role files, profile, open questions and honesty rules |
 
 ## Design ideas worth knowing

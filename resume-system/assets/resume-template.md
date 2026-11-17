@@ -32,4 +32,5 @@
 - Past tense for past roles, present for current
 - No first-person pronouns
 - Company-line under each title: one phrase on what the company is and its scale
-- [Add personal preferences: fonts, color, export template]
+- [Add personal preferences: fonts, color]
+- Design export: the user's chosen Word template is stored at `templates/design/[file]`; see the skill's `references/design-export.md` for how to export into it.

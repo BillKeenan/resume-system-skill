@@ -50,4 +50,4 @@ Issues and pull requests are welcome. Keep the skill free of any one person's da
 
 ## License
 
-MIT. See `LICENSE`.
+MIT. See [LICENSE](LICENSE).

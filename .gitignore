@@ -1,0 +1,4 @@
+.DS_Store
+*.swp
+# Never commit a real knowledge base alongside the skill
+knowledge/

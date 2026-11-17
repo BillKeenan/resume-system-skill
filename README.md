@@ -7,7 +7,7 @@ A skill that helps senior leaders (Director through C-suite) build a structured,
 Clone the repo and copy the skill folder into your skills directory:
 
 ```bash
-git clone <repo-url> resume-system-skill
+git clone https://github.com/BillKeenan/resume-system-skill.git resume-system-skill
 # Personal (all projects):
 cp -r resume-system-skill/resume-system ~/.claude/skills/
 # or one project only:
